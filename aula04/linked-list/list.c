@@ -149,6 +149,7 @@ item_t peek_back(list_t* list) {
 item_t pop_front(list_t* list) {
     if (list_is_empty(list)) {
         fprintf(stderr, "Impossible to remove from empty list");
+        abort();
     }
 
     node_t* trash = list->head;
