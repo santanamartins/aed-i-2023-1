@@ -10,7 +10,7 @@ int compare_int(const void* a, const void* b) {
     if (a_i < b_i) {
         return -1;
     } else if (a_i > b_i) {
-        return -1;
+        return 1;
     }
 
     return 0;
@@ -38,7 +38,7 @@ int main(int argc, char const *argv[]) {
         avl_print(root);
         printf("\n");
     }
-    
+
     avl_destroy(root);
 
     return 0;
