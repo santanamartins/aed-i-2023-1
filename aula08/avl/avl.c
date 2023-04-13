@@ -97,7 +97,7 @@ avl_node_t* avl_rebalance(avl_node_t* root) {
         root = avl_rotate_left(root);
     } else if (bf > 1 && bf_l >= 0) { // R
         root = avl_rotate_right(root);
-    } else if (bf < -1 && bf_l > 0) { // RL
+    } else if (bf < -1 && bf_r > 0) { // RL
         root->right = avl_rotate_right(root->right);
         root = avl_rotate_left(root);
     } else if (bf > 1 && bf_l < 0) { // LR
